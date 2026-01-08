@@ -1,0 +1,15 @@
+{
+  "name": "YT Skip HC",
+  "description": "Automatically skips YouTube's harmful content warning screen",
+  "version": "0.1",
+  "manifest_version": 3,
+  "permissions": ["activeTab"],
+  "host_permissions": ["*://*.youtube.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
